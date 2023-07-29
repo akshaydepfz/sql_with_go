@@ -21,7 +21,7 @@ type studentinfo struct {
 var db *sql.DB
 
 func getMySQLDB() *sql.DB {
-	db, err := sql.Open("mysql", "root:root@tcp(appmoc.com:3306)/studentinfo?parseTime=true")
+	db, err := sql.Open("mysql", "akshay:root@tcp(localhost:3306)/studentinfo?parseTime=true")
 	if err != nil {
 		log.Fatal(err)
 	}
