@@ -103,7 +103,7 @@ func DeleteStudents(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/studentslist", getStudents).Methods("GET")
+	r.HandleFunc("/students", getStudents).Methods("GET")
 	r.HandleFunc("/students", addStudents).Methods("POST")
 	r.HandleFunc("/students/{sid}", updateStudents).Methods("PATCH")
 	r.HandleFunc("/students/{sid}", DeleteStudents).Methods("DELETE")
